@@ -1,0 +1,88 @@
+* {
+  background-color: black;
+}
+
+.welcome {
+  text-align: center;
+  color: white;
+  font-family: 'Righteous', cursive;
+  padding: 10% 0%;
+}
+
+.welcome-child1 {
+  font-size: 12rem;
+}
+
+.welcome-child2 {
+  font-size: 6rem;
+}
+
+.welcome-child1>img {
+  width: 500px;
+  height: 100px;
+}
+
+.yrDev {
+  font-family: 'Fredoka One', cursive;
+  color: darkorange;
+  display: inline-block;
+}
+
+.withYrDv {
+  color: white;
+  display: inline-block;
+}
+
+.portfolioEn {
+  display: inline-block;
+}
+
+.portfolioKR {
+  display: inline-block;
+}
+
+body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+button{
+  background:salmon;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:90px;
+  font-size:2.5em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin-left:50px;
+  margin-right:50px;
+}
+button:hover{
+  background:#fff;
+  color:salmon;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: salmon;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
