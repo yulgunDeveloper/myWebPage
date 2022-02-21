@@ -50,4 +50,25 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    donutAnimation("#donutJava", 70);
+    
+    // donutName에 #필요
+    function donutAnimation(donutName , javaDonutVal) {
+        const donut = document.querySelector(donutName);
+        let t4 = 0
+        const donutAnimation = setInterval(() => {
+            donut.dataset.percent = t4
+            donut.style.background = `conic-gradient(#4F98FF 0 ${t4}%, #DEDEDE ${t4}% 100% )`
+            t4++ >= javaDonutVal && clearInterval(donutAnimation);
+        }, 10);
+    }
+
+    function repeatDonut() {
+        donutAnimation("#donutJava", 70);
+    }
+
+    // document.getElementById("#languages").addEventListener('click', function(event){
+    //     donutAnimation("#donutJava", 70);
+    // });
 });
