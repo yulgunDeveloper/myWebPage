@@ -1,22 +1,26 @@
-* {
+html, body {
   background-color: black;
+  margin: 0;
 }
 
 .welcome {
   text-align: center;
   color: white;
   font-family: 'Righteous', cursive;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  padding-top: 2%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .welcome-child1 {
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 .welcome-child2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .welcome-child1>img {
@@ -43,20 +47,13 @@
   display: inline-block;
 }
 
-body:before{
-  content:'';
-  height:100%;
-  display:inline-block;
-  vertical-align:middle;
-}
-
 button{
   background:salmon;
   color:#fff;
   border:none;
   position:relative;
-  height:90px;
-  font-size:2.5em;
+  height: 50px;
+  font-size:1.6em;
   padding:0 2em;
   cursor:pointer;
   transition:800ms ease all;

@@ -5,5 +5,4 @@ window.addEventListener('DOMContentLoaded', event => {
     // document.addEventListener("click", () => {
     //     document.body.classList.toggle("reveal")
     // });
-    
 });
