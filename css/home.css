@@ -6,10 +6,11 @@
   text-align: center;
   color: white;
   font-family: 'Righteous', cursive;
+  height: 70%;
 }
 
 .welcome-child1 {
-  font-size: 12rem;
+  font-size: 10rem;
 }
 
 .welcome-child2 {
