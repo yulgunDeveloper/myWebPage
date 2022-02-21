@@ -6,7 +6,9 @@
   text-align: center;
   color: white;
   font-family: 'Righteous', cursive;
-  max-width: 100%; height: auto;
+  max-width: 100%;
+  height: auto;
+  padding-top: 2%;
 }
 
 .welcome-child1 {
