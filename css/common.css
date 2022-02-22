@@ -618,7 +618,7 @@ progress {
   --bs-text-opacity: 1;
   max-width: 100%;
   height: auto;
-  background-color: #acaaa6;
+  background-color: #636260;
   border: 2px solid black;
   border-radius: 10px 10px 10px 10px;
   padding: 2rem 1.5rem 2rem 1.5rem;
@@ -10610,6 +10610,11 @@ textarea.form-control-lg {
 
   .ps-xl-5 {
     padding-left: 3rem !important;
+  }
+
+  .selectBox {
+    background-color: #212529;
+    padding-top: 6px;
   }
 
   .text-xl-start {
