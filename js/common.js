@@ -51,7 +51,12 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    donutAnimation("#donutJava", 70);
+    donutAnimation("#donutJava", 80);
+    donutAnimation("#donutSpring", 85);
+    donutAnimation("#donutDB", 70);
+    donutAnimation("#donutJavascript", 55);
+    donutAnimation("#donutCss", 40);
+    donutAnimation("#donutLinux", 60);
     
     // donutName에 #필요
     function donutAnimation(donutName , javaDonutVal) {
@@ -59,16 +64,26 @@ window.addEventListener('DOMContentLoaded', event => {
         let t4 = 0
         const donutAnimation = setInterval(() => {
             donut.dataset.percent = t4
-            donut.style.background = `conic-gradient(#4F98FF 0 ${t4}%, #DEDEDE ${t4}% 100% )`
+            donut.style.background = `conic-gradient(#ffd900 0 ${t4}%, #DEDEDE ${t4}% 100% )`
             t4++ >= javaDonutVal && clearInterval(donutAnimation);
         }, 10);
     }
 
     function repeatDonut() {
-        donutAnimation("#donutJava", 70);
+        donutAnimation("#donutJava", 80);
+        donutAnimation("#donutSpring", 85);
+        donutAnimation("#donutDB", 70);
+        donutAnimation("#donutJavascript", 55);
+        donutAnimation("#donutCss", 40);
+        donutAnimation("#donutLinux", 60);
     }
 
-    // document.getElementById("#languages").addEventListener('click', function(event){
-    //     donutAnimation("#donutJava", 70);
-    // });
+    const linkId = document.getElementById("linkLanguages");
+    const linkId2 = document.getElementById("linkLanguages2");
+    linkId.addEventListener('click', function(event){
+        repeatDonut();
+    });
+    linkId2.addEventListener('click', function(event){
+        repeatDonut();
+    });
 });
