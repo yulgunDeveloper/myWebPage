@@ -567,14 +567,14 @@ progress {
   position: relative;
   text-align: center;
   transition:  background .3s ease-in-out;
-  background: conic-gradient(#3F8BC9 0% 72%, #F2F2F2 72% 100%);
+  background: conic-gradient(#ffd900 0% 72%, #F2F2F2 72% 100%);
 }
 
 .donut::before {
   color: #fff;
   width: 70%;
   padding: calc(35% - .64vw) 0;
-  background: #264057;
+  background: #f09d03;
   border-radius: 50%;
   position: absolute;
   left: 15%;
