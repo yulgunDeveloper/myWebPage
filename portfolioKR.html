@@ -29,6 +29,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#languages" id="linkLanguages">Languages</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificate">Certificate</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
@@ -49,7 +50,7 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Languages</h2>
                     <h3 class="section-subheading text-muted">
-                        주 사용 언어는 Java, Spring, javascript, HTML, CSS, JSP입니다.
+                        주 사용 언어는 Java, Spring이며 Linux, javascript, CSS, JSP, MariaDB, MySQL을 사용할 수 있습니다.
                     </h3>
                 </div>
                 <div class="row text-center">
@@ -110,7 +111,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">여태까지 제가 한 프로젝트들입니다.</h3>
+                    <h3 class="section-subheading text-muted">여태까지 제가 한 프로젝트 목록 및 내용입니다.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -158,6 +159,20 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- Certificate-->
+        <section class="page-section" id="certificate">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Certificate</h2>
+                    <h3 class="section-subheading text-muted">
+                        자격증 목록
+                    </h3>
+                </div>
+                <div class="text-muted">
+                    <h4 class="section-heading text-uppercase">정보처리기사, 교원자격증 - 중등학교정교사(2급) 수학</h4>
                 </div>
             </div>
         </section>
@@ -209,20 +224,20 @@
                             <div class="form-group">
                                 <!-- Email address input-->
                                 <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">E-mail을 입력해주세요.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">E-mail형식이 아닙니다.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
                                 <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">번호를 입력해주세요.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
                                 <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">메시지를 입력해주세요.</div>
                             </div>
                         </div>
                     </div>
@@ -259,8 +274,8 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">프로젝트명</h2>
-                                    <p class="item-intro text-muted">변동성프로젝트</p>
+                                    <h2 class="text-uppercase">변동성프로젝트</h2>
+                                    <p class="item-intro text-muted">전자정부프레임워크를 이용한 발전량 예측 비교 프로그램</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
                                     <p>
                                         한국전력공사 내부에서 쓰는 프로그램을 개발하였으며, 태양광 및 풍력 발전량의 순시값을 예측하여
@@ -311,7 +326,7 @@
                                             한국전력공사
                                         </li>
                                         <li>
-                                            <strong>Languages:</strong>
+                                            <strong>Languages/Framworks etc:</strong>
                                             Spring Boot, gradle, MariaDB 등
                                         </li>
                                     </ul>
@@ -336,18 +351,21 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <h2 class="text-uppercase">신재생에너지 예측프로그램</h2>
+                                    <p class="item-intro text-muted">Spring Boot를 이용하여 신재생에너지의 발전량 및 발전예측량을 비교하고 분석하는 프로그램</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>
+                                        실시간 신재생 발전·예측 데이터를 활용하여 지역 계통 운영의 안정성을 확
+                                        보하고, 계통운영 비용 절감할 수 있는 신재생 지역 관제시스템(LRMS)) 구축
+                                    </p>
                                     <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
-                                            Finish
+                                            한국전력공사
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Identity
+                                            <strong>Languages/Framworks etc:</strong>
+                                            Spring Boot, gradle, MariaDB 등
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
