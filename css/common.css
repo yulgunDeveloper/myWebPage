@@ -571,6 +571,7 @@ progress {
   position: relative;
   text-align: center;
   transition:  background .3s ease-in-out;
+  font-size: 2vw;
   background: conic-gradient(#ffd900 0% 72%, #F2F2F2 72% 100%);
 }
 
@@ -587,7 +588,6 @@ progress {
   content: attr(data-percent)'%';
   transform: skew(-0.03deg);
   margin: auto;
-  font-size: 1.1vw;
   font-size: 2vw;
   padding: calc(35% - 1.3vw) 0;
 }
