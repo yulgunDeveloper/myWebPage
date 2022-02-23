@@ -592,38 +592,6 @@ progress {
   padding: calc(35% - 1.3vw) 0;
 }
 
-@media (min-width: 992px) {
-  
-.donut {
-  width: calc(100% - 70px);
-  padding-bottom: calc(100% - 70px);
-  margin: 0 auto;
-  border-radius: 50%;
-  position: relative;
-  text-align: center;
-  transition:  background .3s ease-in-out;
-  font-size: 10rem;
-  background: conic-gradient(#ffd900 0% 72%, #F2F2F2 72% 100%);
-}
-
-.donut::before {
-  color: #fff;
-  width: 70%;
-  padding: calc(35% - .64vw) 0;
-  background: #f09d03;
-  border-radius: 50%;
-  position: absolute;
-  left: 15%;
-  top: 15%;
-  display: block;
-  content: attr(data-percent)'%';
-  transform: skew(-0.03deg);
-  margin: auto;
-  font-size: 6vw;
-  padding: calc(35% - 3.9vw) 0;
-}
-}
-
 .list-unstyled {
   padding-left: 0;
   list-style: none;
