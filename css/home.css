@@ -85,3 +85,13 @@ button:hover:before,button:hover:after{
   width:100%;
   transition:800ms ease all;
 }
+a {
+  color: #ffc800;
+  text-decoration: none;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: bold;
+}
+a:hover {
+  color: #fff;
+  font-size: large;
+}
