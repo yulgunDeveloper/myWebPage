@@ -1,2 +1,40 @@
-const projects=[{title:'변동성 프로젝트',summary:'태양광 및 풍력 발전량의 순시값을 예측하고, 실제 발전량과의 오차 범위를 표와 차트로 표현하는 프로그램입니다. 한국전력공사 내부 프로그램으로 개발했으며, 전자정부프레임워크 기반으로 데이터 비교와 시각화를 구현했습니다.',stack:'전자정부프레임워크 · JSP · OracleDB'},{title:'Serial 통신',summary:'기상청 데이터를 수신하면 Linux에서 Spring Boot 애플리케이션을 백그라운드로 실행합니다. 시리얼 작업 로그에 기록된 테이블 정보와 조건에 따라 적재 이벤트를 발생시키고, 로그의 상태값과 수행 상태를 확인하여 데이터를 적재하는 프로세스입니다.',stack:'Spring Boot · Gradle · MariaDB · Linux'},{title:'신재생에너지 예측 프로그램',summary:'실시간 신재생 발전 데이터와 발전 예측량을 비교하고 분석하는 프로그램입니다. 지역 계통 운영의 안정성 확보와 계통 운영 비용 절감을 목적으로 한 신재생 지역 관제시스템(LRMS) 구축 프로젝트입니다.',stack:'Spring Boot · Gradle · MariaDB'}];
-const dialog=document.querySelector('dialog');document.querySelectorAll('[data-project]').forEach(button=>button.addEventListener('click',()=>{const p=projects[Number(button.dataset.project)];document.querySelector('#dialog-title').textContent=p.title;document.querySelector('#dialog-summary').textContent=p.summary;document.querySelector('#dialog-stack').textContent=p.stack;dialog.showModal();document.body.classList.add('no-scroll')}));document.querySelector('.close').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>document.body.classList.remove('no-scroll'));dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()});document.querySelector('#year').textContent=new Date().getFullYear();document.querySelector('#copy').addEventListener('click',async()=>{const status=document.querySelector('#copy-status');try{await navigator.clipboard.writeText('green4652@naver.com');status.textContent='이메일을 복사했어요.'}catch{status.textContent='green4652@naver.com 주소를 선택해 복사해 주세요.'}});
+const projects = window.PORTFOLIO_PROJECTS;
+const dialog = document.querySelector('#project-dialog');
+function showProject(index) {
+  const project = projects[index];
+  document.querySelector('#dialog-title').textContent = project.title;
+  document.querySelector('#dialog-summary').textContent = project.context;
+  document.querySelector('#dialog-stack').textContent = project.stack.join(' · ');
+  const details = document.querySelector('#dialog-details');
+  details.replaceChildren();
+  const background = document.createElement('section'); background.className = 'detail-background';
+  const backgroundTitle = document.createElement('h3'); backgroundTitle.textContent = '사업 배경';
+  const backgroundText = document.createElement('p'); backgroundText.textContent = project.background;
+  background.append(backgroundTitle, backgroundText); details.append(background);
+  const flow = document.createElement('ol');
+  flow.className = 'project-flow';
+  flow.setAttribute('aria-label', '프로젝트 처리 흐름');
+  project.flow.forEach(text => {const item = document.createElement('li'); item.textContent = text; flow.append(item);});
+  details.append(flow);
+  const heading = document.createElement('h3'); heading.textContent = '담당 개발 내용'; details.append(heading);
+  project.points.forEach(([title, description]) => {
+    const article = document.createElement('article'); article.className = 'detail-point';
+    const h = document.createElement('h4'); h.textContent = title;
+    const p = document.createElement('p'); p.textContent = description;
+    article.append(h, p); details.append(article);
+  });
+  const value = document.createElement('section'); value.className = 'detail-value';
+  const valueTitle = document.createElement('h3'); valueTitle.textContent = '개발의 의미';
+  const valueText = document.createElement('p'); valueText.textContent = project.value;
+  value.append(valueTitle, valueText); details.append(value);
+  const sources = document.querySelector('#dialog-sources'); sources.replaceChildren();
+  project.sources.forEach(source => {const link = document.createElement('a'); link.href = source.url; link.textContent = source.label + ' ↗'; link.target = '_blank'; link.rel = 'noopener noreferrer'; sources.append(link);});
+  document.querySelector('#dialog-scope').textContent = project.scope;
+  dialog.showModal(); dialog.scrollTop = 0; document.body.classList.add('no-scroll');
+}
+document.querySelectorAll('[data-project]').forEach(button => button.addEventListener('click', () => showProject(Number(button.dataset.project))));
+document.querySelector('.close').addEventListener('click', () => dialog.close());
+dialog.addEventListener('close', () => document.body.classList.remove('no-scroll'));
+dialog.addEventListener('click', event => {const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();});
+document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelector('#copy').addEventListener('click', async () => {const status = document.querySelector('#copy-status'); try {await navigator.clipboard.writeText('green4652@naver.com'); status.textContent = '이메일을 복사했어요.';} catch {status.textContent = 'green4652@naver.com 주소를 선택해 복사해 주세요.';}});
